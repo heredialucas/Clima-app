@@ -1,0 +1,39 @@
+.navegacion{
+  background-color:#6b80a0;
+  border-radius: 0 0 0 50px;
+}
+
+#logo {
+    margin: 0 10px 0 10px;
+  }
+
+  .cabecera{
+    text-decoration: none;
+    letter-spacing: 1px;
+  }
+  
+  .linkAbout{
+    letter-spacing: 1px;
+    /* outline: 2px solid aliceblue; */
+    padding: 5px 4px;
+    color: aliceblue;
+  }
+  .linkAbout:hover{
+    color: aliceblue;
+    outline-style: dotted;
+    border-radius: 15px;
+    transition:.5s;
+  }
+
+  .linkHome{
+    letter-spacing: 1px;
+    /* outline: 2px solid aliceblue; */
+    padding: 5px 4px;
+    color: aliceblue;
+  }
+  .linkHome:hover{
+    color: aliceblue;
+    outline-style: dotted;
+    border-radius: 15px;
+    transition:.5s;
+  }

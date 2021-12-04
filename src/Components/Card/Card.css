@@ -1,0 +1,68 @@
+.card {
+  background-color: #cad3e2;
+  padding-bottom: 10px;
+  border-radius: 30px 30px 130px 130px ;
+  margin: 20px;
+  width: 18rem;
+}
+.iconoClima{
+    margin: auto;
+  }
+  .cartas{
+    text-align: center;
+  }
+  
+  .card-title {
+    color:#334b70;
+    margin-bottom: 15px;
+  }
+  .card-title:hover{
+    transition: 2s;
+    border-right: 60px solid #cad3e2;
+    border-left: 60px solid #cad3e2;
+    border-color: #334b70;
+  }
+  
+  .cartasDatos-p1{
+    border-color: #334b70;
+    color:#334b70;
+  }
+  .cartasDatos-p1:hover{
+    transition: .3s;
+    text-decoration: underline;
+    
+  }
+  .cartasDatos-p2{
+    color:#334b70;
+    text-decoration: none;
+  }
+  .cartasDatos-p2:hover{
+    transition: .3s;
+    display: inline;
+    padding-left: 5px;
+    padding-right: 5px;
+    border: 1px solid #334b70;
+    border-radius: 50%;
+  }
+  #closeIcon {
+    display: flex;
+    justify-content: center;
+    margin-right: 8px;
+    margin-top: 8px;
+  }
+  .boton{
+    width: 50px;
+    background-color: #334b70;
+    border-radius: 50px 50px 100px 100px;
+    border-color: #334b70;
+  }
+  .boton:hover{
+    transition: 1s;
+    outline: none;
+    background-color: #334b70;
+    width: 120px;
+    border-color: #334b70;
+    border-radius: 50px 50px 400px 400px;
+  }
+ 
+  
