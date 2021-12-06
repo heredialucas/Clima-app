@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import './SearchBar.css'
 
 export default function SearchBar({ onSearch }) {
   const [city, setCity] = useState("");
@@ -18,7 +19,7 @@ export default function SearchBar({ onSearch }) {
           value={city}
           onChange={(e) => setCity(e.target.value)}
         />
-        <input className="btn btn-primary me-2" type="submit" value="Buscar" />
+        <input className="btn btn-primary me-2 botonSearch" type="submit" value="Buscar" />
       </form>
   );
 }

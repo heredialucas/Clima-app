@@ -12,3 +12,15 @@ a{
     /* color: aliceblue; */
     text-decoration: none;
 }
+
+.botonSwal{
+    background-color: #6b80a0;
+    color: aliceblue;
+    border:1px solid aliceblue;
+}
+.botonSwal:hover{
+    transition: .5s;
+    background-color: aliceblue;
+    color: #6b80a0;
+    border:1px solid aliceblue;
+}

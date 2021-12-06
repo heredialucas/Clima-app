@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { Routes, Route} from "react-router-dom";
-
+import { Routes, Route } from "react-router-dom";
+import swal from "sweetalert";
 
 import "./App.css";
 import Nav from "./Components/Nav/Nav.jsx";
@@ -10,18 +10,30 @@ import Ciudad from "./Components/Ciudad/Ciudad.jsx";
 
 const apiKey = "4ae2636d8dfbdc3044bede63951a019b";
 
-
 function App() {
   const [cities, setCities] = useState([]);
-  
 
   function onClose(id) {
     setCities((oldCities) => oldCities.filter((c) => c.id !== id));
+    swal({
+      title: "Ciudad eliminada correctamente",
+      icon: "success",
+      button:{
+        className: 'botonSwal'
+      }
+    });
   }
 
   function onSearch(ciudad) {
     //Llamado a la API del clima
-    if(ciudad === '') return alert("Debe escribir una localidad")
+    if (ciudad === "")
+      return swal({
+        title: "Debe escribir una ciudad",
+        icon:'warning',
+        button:{
+          className: 'botonSwal'
+        }
+      });
     fetch(
       `http://api.openweathermap.org/data/2.5/weather?q=${ciudad}&appid=${apiKey}`
     )
@@ -41,14 +53,33 @@ function App() {
             latitud: recurso.coord.lat,
             longitud: recurso.coord.lon,
           };
-          let aux = cities.find(c => c.id === recurso.id)
-          if(aux){
-            alert ("Esta ciudad se encuentra creada")
-          }else{
+          let aux = cities.find((c) => c.id === recurso.id);
+          if (aux) {
+            swal({
+              title: "Esta ciudad ya se encuentra creada",
+              icon:'warning',
+              button:{
+                className: 'botonSwal'
+              }
+            });
+          } else {
             setCities((oldCities) => [...oldCities, ciudad]);
+            swal({
+              title: "Ciudad agregada correctamente",
+              icon: "success",
+              button:{
+                className: 'botonSwal'
+              }
+            });
           }
         } else {
-          alert("Ciudad no encontrada");
+          swal({
+            title: "Ciudad no encontrada",
+            icon:'error',
+            button:{
+              className: 'botonSwal'
+            }
+          });
         }
       });
   }
@@ -66,8 +97,8 @@ function App() {
       <Nav onSearch={onSearch} />
       <Routes>
         <Route path="/" element={<Cards cities={cities} onClose={onClose} />} />
-        <Route path='/about' element={<About/>}/>
-        <Route path='/ciudad/:ciudadId' element={<Ciudad city={cities}/>}/>
+        <Route path="/about" element={<About />} />
+        <Route path="/ciudad/:ciudadId" element={<Ciudad city={cities} />} />
       </Routes>
     </>
   );
