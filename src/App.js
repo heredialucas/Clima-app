@@ -7,6 +7,7 @@ import Nav from "./Components/Nav/Nav.jsx";
 import Cards from "./Components/Cards/Cards.jsx";
 import About from "./Components/About/About";
 import Ciudad from "./Components/Ciudad/Ciudad.jsx";
+import Inicio from "./Components/Inicio/Inicio";
 
 const apiKey = "4ae2636d8dfbdc3044bede63951a019b";
 
@@ -96,7 +97,8 @@ function App() {
     <>
       <Nav onSearch={onSearch} />
       <Routes>
-        <Route path="/" element={<Cards cities={cities} onClose={onClose} />} />
+        <Route path='/' element={<Inicio/>}/>
+        <Route path="/ciudades" element={<Cards cities={cities} onClose={onClose} />} />
         <Route path="/about" element={<About />} />
         <Route path="/ciudad/:ciudadId" element={<Ciudad city={cities} />} />
       </Routes>

@@ -1,0 +1,33 @@
+.containerInicio{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+
+.inicio1{
+    padding: 50px;
+    box-shadow: 0 0 5px 1px #000;
+    margin: 40px 200px;
+    font-size: 60px;
+    text-align: center;
+    color: #3b506e;
+}
+.inicio1:hover{
+    transition: .5s;
+    border-radius: 15px;
+}
+.inicio2{
+    padding: 50px ;
+    box-shadow: 0 0 5px 1px #000;
+    margin: 40px 500px;
+    font-size: 40px;
+    text-align: center;
+    color: #3b506e;
+}
+.inicio2:hover{
+    transition: .5s;
+    border-radius: 50%;
+    cursor: pointer;
+}
