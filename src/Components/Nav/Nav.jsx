@@ -4,7 +4,9 @@ import SearchBar from "../SearchBar/SearchBar.jsx";
 import "./Nav.css";
 import { Link } from "react-router-dom";
 
-function Nav({ onSearch }) {
+function Nav({ onSearch}) {
+
+
   return (
     <nav className="navbar navbar-dark navegacion">
       <Link className="linkCabecera" to="/">

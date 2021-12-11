@@ -1,10 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Card.css";
 import { Link } from "react-router-dom";
 
 export default function Card({ min, max, name, img, onClose, id }) {
+  const [style, setStyle] = useState(true);
+
+  function onChange() {
+    style ? setStyle(false) : setStyle(true);
+  }
+
   return (
-    <div className="card">
+    <div className={style ? "card" : "cardNew"}>
+      <div id="changeIcon" className="container">
+        <button onClick={onChange} className={style ? "botonChange" : "botonChange2"}>
+        </button>
+      </div>
       <Link className="cartas" to={`/ciudad/${id}`}>
         <div className="card-body d-flex flex-column align-content-center">
           <img
@@ -28,7 +38,7 @@ export default function Card({ min, max, name, img, onClose, id }) {
         </div>
       </Link>
       <div id="closeIcon" className="container">
-        <button onClick={onClose} className="btn btn-sm btn-danger boton">
+        <button onClick={onClose} className={style ? "boton" : "boton2"}>
           X
         </button>
       </div>

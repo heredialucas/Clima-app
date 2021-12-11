@@ -13,6 +13,7 @@ const apiKey = "4ae2636d8dfbdc3044bede63951a019b";
 
 function App() {
   const [cities, setCities] = useState([]);
+  // const [style, setStyle] = useState(true);
 
   const citiesSaveLocalStorage = () => {
     const citiesStorage = JSON.parse(window.localStorage.getItem("citieSave"));
@@ -25,7 +26,6 @@ function App() {
   useEffect(() => {
     window.localStorage.setItem("citieSave", JSON.stringify(cities));
   }, [cities]);
-
 
   function onClose(id) {
     setCities((oldCities) => oldCities.filter((c) => c.id !== id));

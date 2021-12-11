@@ -28,12 +28,11 @@
   margin: 20px;
   width: 18rem;
 }
-
 .card:hover:before {
   transition: 1s;
   position: absolute;
-  top: 200px;
-  left: 180px;
+  top: 220px;
+  left: 210px;
   width: 100px;
   height: 100px;
 }
@@ -48,6 +47,58 @@
   left: 120px;
   background-color: #334b70;
   opacity: 0.1;
+}
+.cardNew:hover:after {
+  transition: 1s;
+  position: absolute;
+  background-color: #0f1011;
+  top: -70px;
+  left: -50px;
+  width: 150px;
+  height: 150px;
+}
+
+.cardNew::after {
+  content: "";
+  position: absolute;
+  border-radius: 5px;
+  width: 180px;
+  height: 180px;
+  top: -50px;
+  left: -30px;
+  background-color: #334b70;
+  opacity: 0.1;
+}
+.cardNew {
+  position: relative;
+  box-shadow: 0px 0px 8px 0.2px #000;
+  overflow: hidden;
+  background-color: #fff;
+  padding-bottom: 10px;
+  border-radius: 3px;
+  margin: 20px;
+  width: 18rem;
+}
+.cardNew::before {
+  content: "";
+  display: block;
+  position: absolute;
+  border-radius: 5px;
+  width: 200px;
+  height: 200px;
+  top: 160px;
+  left: 120px;
+  background-color: #334b70;
+  opacity: 0.1;
+}
+
+.cardNew:hover:before {
+  transition: 1s;
+  position: absolute;
+  top: 240px;
+  left: 210px;
+  width: 100px;
+  height: 100px;
 }
 
 .iconoClima {
@@ -68,7 +119,7 @@
   border-color: #334b70;
 }
 
-.dataCard{
+.dataCard {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -94,50 +145,117 @@
   border: 1px solid #334b70;
   border-radius: 50%;
 }
+#changeIcon {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 8px;
+  margin-top: 8px;
+}
 #closeIcon {
   display: flex;
   justify-content: center;
   margin-right: 8px;
   margin-top: 8px;
 }
+.botonChange2 {
+  width: 20px;
+  height: 20px;
+  background-color: #425a7e;
+  border-radius: 50%;
+  border-color: #334b70;
+  color: aliceblue;
+}
+.botonChange2:hover {
+  transition: 0.5s;
+  outline: none;
+  background-color: #7c93b6;
+  border-color: #7c93b6;
+  border-radius: 50%;
+  box-shadow: 0px 0px 4px 0.2px #000;
+}
+.botonChange {
+  width: 20px;
+  height: 20px;
+  background-color: #425a7e;
+  border-radius: 4px;
+  border-color: #334b70;
+  color: aliceblue;
+}
+.botonChange:hover {
+  transition: 0.5s;
+  outline: none;
+  background-color: #7c93b6;
+  border-color: #7c93b6;
+  border-radius: 1px;
+  box-shadow: 0px 0px 4px 0.2px #000;
+}
+.boton2 {
+  width: 50px;
+  background-color: #334b70;
+  border-radius: 6px;
+  border-color: #334b70;
+  color: aliceblue;
+}
+.boton2:hover {
+  box-shadow: 0px 0px 4px 0.2px #000;
+  transition: 1s;
+  outline: none;
+  background-color: #e04018;
+  width: 120px;
+  border-color: #334b70;
+  border-radius: 6px;
+}
 .boton {
   width: 50px;
   background-color: #334b70;
   border-radius: 50px 50px 100px 100px;
   border-color: #334b70;
+  color: aliceblue;
 }
 .boton:hover {
+  box-shadow: 0px 0px 4px 0.2px #000;
   transition: 1s;
   outline: none;
-  background-color: #334b70;
+  background-color: #e04018;
   width: 120px;
   border-color: #334b70;
   border-radius: 50px 50px 400px 400px;
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 800px) {
   .boton {
     width: 120px;
     background-color: #334b70;
     border-radius: 50px 50px 400px 400px;
     border-color: #334b70;
   }
-  .card{
-    background-color: #cad3e2;
+  .boton2 {
+    width: 120px;
+    background-color: #334b70;
+    border-radius: 6px;
+    border-color: #334b70;
   }
-  
+
+  .cardNew::before {
+    width: 120px;
+    height: 120px;
+    left: 220px;
+  }
+  .cardNew::after {
+    width: 120px;
+    height: 120px;
+  }
   .card::before {
     width: 120px;
     height: 120px;
     left: 220px;
-
   }
   .card::after {
     width: 120px;
     height: 120px;
   }
 
-  .dataCard{
+  .dataCard {
     display: flex;
     flex-direction: row;
     justify-content: space-around;

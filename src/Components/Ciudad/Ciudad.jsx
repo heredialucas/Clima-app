@@ -8,7 +8,7 @@ export default function Ciudad({city}) {
 
 
     return (
-        <div className="container">
+        <div className="containerCiudad">
                 <div className="contentCardTitle">
                     <div className="titleCard">
 
