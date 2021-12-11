@@ -112,11 +112,11 @@ function App() {
       <Routes>
         <Route path="/" element={<Inicio />} />
         <Route
-          path="/ciudades"
+          path="/Clima-app/ciudades"
           element={<Cards cities={cities} onClose={onClose} />}
         />
-        <Route path="/about" element={<About />} />
-        <Route path="/ciudad/:ciudadId" element={<Ciudad city={cities} />} />
+        <Route path="/Clima-app/about" element={<About />} />
+        <Route path="/Clima-app/ciudad/:ciudadId" element={<Ciudad city={cities} />} />
       </Routes>
     </>
   );

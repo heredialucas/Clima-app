@@ -8,7 +8,7 @@ import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
-  <BrowserRouter>
+  <BrowserRouter basemname={`/${process.env.PUBLIC_URL}`}>
     <App/>
   </BrowserRouter>,
   document.getElementById('root')
