@@ -1,16 +1,16 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import App from "./App";
-import { BrowserRouter } from "react-router-dom";
+import { HashRouter } from "react-router-dom";
 
 import './index.css';
 import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
-  <BrowserRouter basemname={`/${process.env.PUBLIC_URL}`}>
+  <HashRouter>
     <App/>
-  </BrowserRouter>,
+  </HashRouter>,
   document.getElementById('root')
 );
 
