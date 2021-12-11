@@ -1,5 +1,5 @@
-.card::after{
-  content: '';
+.card::after {
+  content: "";
   position: absolute;
   border-radius: 50%;
   width: 200px;
@@ -7,9 +7,9 @@
   top: -50px;
   left: -30px;
   background-color: #334b70;
-  opacity: .1;
+  opacity: 0.1;
 }
-.card:hover:after{
+.card:hover:after {
   transition: 1s;
   position: absolute;
   background-color: #0f1011;
@@ -20,16 +20,16 @@
 }
 
 .card {
-  box-shadow: 0px 0px 8px .2px #000;
+  box-shadow: 0px 0px 8px 0.2px #000;
   overflow: hidden;
   background-color: #fff;
   padding-bottom: 10px;
-  border-radius: 30px 30px 130px 130px ;
+  border-radius: 30px 30px 130px 130px;
   margin: 20px;
   width: 18rem;
 }
 
-.card:hover:before{
+.card:hover:before {
   transition: 1s;
   position: absolute;
   top: 200px;
@@ -37,8 +37,8 @@
   width: 100px;
   height: 100px;
 }
-.card::before{
-  content: '';
+.card::before {
+  content: "";
   display: block;
   position: absolute;
   border-radius: 50%;
@@ -47,68 +47,99 @@
   top: 160px;
   left: 120px;
   background-color: #334b70;
-  opacity: .1;
+  opacity: 0.1;
 }
 
+.iconoClima {
+  margin: auto;
+}
+.cartas {
+  text-align: center;
+}
 
-.iconoClima{
-    margin: auto;
-  }
-  .cartas{
-    text-align: center;
-  }
-  
-  .card-title {
-    color:#334b70;
-    margin-bottom: 15px;
-  }
-  .card-title:hover{
-    transition: 2s;
-    border-right: 60px solid #cad3e2;
-    border-left: 60px solid #cad3e2;
-    border-color: #334b70;
-  }
-  
-  .cartasDatos-p1{
-    border-color: #334b70;
-    color:#334b70;
-  }
-  .cartasDatos-p1:hover{
-    transition: .3s;
-    text-decoration: underline;
-    
-  }
-  .cartasDatos-p2{
-    color:#334b70;
-    text-decoration: none;
-  }
-  .cartasDatos-p2:hover{
-    transition: .3s;
-    display: inline;
-    padding-left: 5px;
-    padding-right: 5px;
-    border: 1px solid #334b70;
-    border-radius: 50%;
-  }
-  #closeIcon {
-    display: flex;
-    justify-content: center;
-    margin-right: 8px;
-    margin-top: 8px;
-  }
-  .boton{
-    width: 50px;
-    background-color: #334b70;
-    border-radius: 50px 50px 100px 100px;
-    border-color: #334b70;
-  }
-  .boton:hover{
-    transition: 1s;
-    outline: none;
-    background-color: #334b70;
+.card-title {
+  color: #334b70;
+  margin-bottom: 15px;
+}
+.card-title:hover {
+  transition: 2s;
+  border-right: 60px solid #cad3e2;
+  border-left: 60px solid #cad3e2;
+  border-color: #334b70;
+}
+
+.dataCard{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.cartasDatos-p1 {
+  border-color: #334b70;
+  color: #334b70;
+}
+.cartasDatos-p1:hover {
+  transition: 0.3s;
+  text-decoration: underline;
+}
+.cartasDatos-p2 {
+  color: #334b70;
+  text-decoration: none;
+}
+.cartasDatos-p2:hover {
+  transition: 0.3s;
+  display: inline;
+  padding-left: 5px;
+  padding-right: 5px;
+  border: 1px solid #334b70;
+  border-radius: 50%;
+}
+#closeIcon {
+  display: flex;
+  justify-content: center;
+  margin-right: 8px;
+  margin-top: 8px;
+}
+.boton {
+  width: 50px;
+  background-color: #334b70;
+  border-radius: 50px 50px 100px 100px;
+  border-color: #334b70;
+}
+.boton:hover {
+  transition: 1s;
+  outline: none;
+  background-color: #334b70;
+  width: 120px;
+  border-color: #334b70;
+  border-radius: 50px 50px 400px 400px;
+}
+
+@media screen and (max-width: 700px) {
+  .boton {
     width: 120px;
-    border-color: #334b70;
+    background-color: #334b70;
     border-radius: 50px 50px 400px 400px;
+    border-color: #334b70;
   }
- 
+  .card{
+    background-color: #cad3e2;
+  }
   
+  .card::before {
+    width: 120px;
+    height: 120px;
+    left: 220px;
+
+  }
+  .card::after {
+    width: 120px;
+    height: 120px;
+  }
+
+  .dataCard{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}

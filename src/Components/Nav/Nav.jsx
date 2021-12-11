@@ -27,7 +27,7 @@ function Nav({ onSearch }) {
         <Link className="linkHome mx-2" to="/ciudades">
           <span>Ciudades</span>
         </Link>
-        <Link className="linkAbout mx-2" to="/about">
+        <Link className="linkHome mx-2" to="/about">
           <span>Acerca del Proyecto</span>
         </Link>
       </div>

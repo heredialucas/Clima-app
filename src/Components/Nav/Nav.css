@@ -1,39 +1,48 @@
-.navegacion{
-  background-color:#6b80a0;
+.navegacion {
+  background-color: #6b80a0;
   border-radius: 0 0 0 50px;
 }
 
 #logo {
-    margin: 0 10px 0 10px;
+  margin: 0 10px 0 10px;
+}
+.linkCabecera{
+  justify-self: unset;
+}
+.cabecera {
+  text-decoration: none;
+  letter-spacing: 1px;
+}
+
+.linkHome {
+  letter-spacing: 1px;
+  /* outline: 2px solid aliceblue; */
+  padding: 5px 4px;
+  color: aliceblue;
+}
+.linkHome:hover {
+  color: aliceblue;
+  outline-style: dotted;
+  border-radius: 15px;
+  transition: 0.5s;
+}
+
+@media screen and (max-width: 700px) {
+  .navegacion {
+    display: flex;
+    justify-content: center;
+    border-radius: 0 0 0 0px;
   }
 
-  .cabecera{
-    text-decoration: none;
-    letter-spacing: 1px;
-  }
-  
-  .linkAbout{
-    letter-spacing: 1px;
+  .linkHome {
+    letter-spacing: .5px;
     /* outline: 2px solid aliceblue; */
-    padding: 5px 4px;
+    padding: 2px 1px;
     color: aliceblue;
+    font-size: 15px;
   }
-  .linkAbout:hover{
-    color: aliceblue;
-    outline-style: dotted;
-    border-radius: 15px;
-    transition:.5s;
+  .linkCabecera{
+    justify-self: flex-start;
   }
 
-  .linkHome{
-    letter-spacing: 1px;
-    /* outline: 2px solid aliceblue; */
-    padding: 5px 4px;
-    color: aliceblue;
-  }
-  .linkHome:hover{
-    color: aliceblue;
-    outline-style: dotted;
-    border-radius: 15px;
-    transition:.5s;
-  }
+}

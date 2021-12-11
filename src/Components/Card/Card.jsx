@@ -15,12 +15,12 @@ export default function Card({ min, max, name, img, onClose, id }) {
             alt=""
           />
           <h5 className="card-title">{name}</h5>
-          <div className="row">
-            <div className="col-sm-6 col-md-6 col-lg-6 cartasDatos">
+          <div className=" dataCard">
+            <div className=" col-md-6 col-lg-6 cartasDatos">
               <p className="cartasDatos-p1">Min</p>
               <p className="cartasDatos-p2">{min}°</p>
             </div>
-            <div className="col-sm-6 col-md-6 col-lg-6 cartasDatos">
+            <div className=" col-md-6 col-lg-6 cartasDatos">
               <p className="cartasDatos-p1">Max</p>
               <p className="cartasDatos-p2">{max}°</p>
             </div>
