@@ -24,9 +24,6 @@ function Nav({ onSearch}) {
       </Link>
       <div className='d-flex justify-content-center py-3 navSeparador'>
         <Link className="linkHome mx-2" to="/">
-          <span>Inicio</span>
-        </Link>
-        <Link className="linkHome mx-2" to="/ciudades">
           <span>Ciudades</span>
         </Link>
         <Link className="linkHome mx-2" to="/about">

@@ -6,7 +6,8 @@ import Card from '../Card/Card.jsx';
 export default function Cards({cities, onClose}) {
   return (
     <div className='cards'>
-      {cities.map(c => <Card
+      {(!cities) ? "No hay ciudades que mostrar" :
+      cities.map(c => <Card
           key={c.id}
           max={c.max}
           min={c.min}

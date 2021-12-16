@@ -7,7 +7,6 @@ import Nav from "./Components/Nav/Nav.jsx";
 import Cards from "./Components/Cards/Cards.jsx";
 import About from "./Components/About/About";
 import Ciudad from "./Components/Ciudad/Ciudad.jsx";
-import Inicio from "./Components/Inicio/Inicio";
 
 const apiKey = "4ae2636d8dfbdc3044bede63951a019b";
 
@@ -67,7 +66,7 @@ function App() {
             latitud: recurso.coord.lat,
             longitud: recurso.coord.lon,
           };
-          let aux = cities.find((c) => c.id === recurso.id);
+          let aux = cities && cities.find((c) => c.id === ciudad.id);
           if (aux) {
             swal({
               title: "Esta ciudad ya se encuentra creada",
@@ -77,7 +76,7 @@ function App() {
               },
             });
           } else {
-            setCities((oldCities) => [...oldCities, ciudad]);
+            setCities((oldCities) =>[...oldCities, ciudad])
             swal({
               title: "Ciudad agregada correctamente",
               icon: "success",
@@ -98,25 +97,24 @@ function App() {
       });
   }
 
-  // function onFilter(ciudadId) {
-  //   let ciudad = cities.filter((c) => c.id === parseInt(ciudadId));
-  //   if (ciudad.length > 0) {
-  //     return ciudad[0];
-  //   } else {
-  //     return null;
-  //   }
-  // }
+  function onFilter(ciudadId) {
+    let ciudad = cities.filter((c) => c.id === parseInt(ciudadId));
+    if (ciudad.length > 0) {
+      return ciudad[0];
+    } else {
+      return null;
+    }
+  }
   return (
     <>
       <Nav onSearch={onSearch} />
       <Routes>
-        <Route path="/" element={<Inicio />} />
+        <Route path="/about" element={<About />} />
         <Route
-          path="/ciudades"
+          path="/"
           element={<Cards cities={cities} onClose={onClose} />}
         />
-        <Route path="/about" element={<About />} />
-        <Route path="/ciudad/:ciudadId" element={<Ciudad city={cities} />} />
+        <Route path="/ciudad/:ciudadId" element={<Ciudad onFilter={onFilter} city={cities} />} />
       </Routes>
     </>
   );

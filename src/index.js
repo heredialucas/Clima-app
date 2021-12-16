@@ -8,7 +8,7 @@ import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
-  <HashRouter>
+  <HashRouter basename='/'>
     <App/>
   </HashRouter>,
   document.getElementById('root')

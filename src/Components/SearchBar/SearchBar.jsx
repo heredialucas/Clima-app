@@ -14,7 +14,7 @@ export default function SearchBar({ onSearch }) {
         e.preventDefault();
         onSearch(city);
         setCity("");
-        redir('./ciudades')
+        redir('./')
       }}
     >
       <input
