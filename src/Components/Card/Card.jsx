@@ -1,8 +1,13 @@
 import React, { useState } from "react";
 import "./Card.css";
 import { Link } from "react-router-dom";
+import { onClose } from "../redux/actions/actions";
+import { useDispatch } from "react-redux";
 
-export default function Card({ min, max, name, img, onClose, id }) {
+export default function Card({ min, max, name, img, id }) {
+  
+  const dispatch = useDispatch();
+  
   const [style, setStyle] = useState(true);
 
   function onChange() {
@@ -38,7 +43,7 @@ export default function Card({ min, max, name, img, onClose, id }) {
         </div>
       </Link>
       <div id="closeIcon" className="container">
-        <button onClick={onClose} className={style ? "boton" : "boton2"}>
+        <button onClick={()=>(dispatch(onClose(id)))} className={style ? "boton" : "boton2"}>
           X
         </button>
       </div>

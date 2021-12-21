@@ -1,32 +1,44 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useSelector, useDispatch } from "react-redux";
 import { useParams } from "react-router";
-import './Ciudad.css'
+import { onFilter } from "../redux/actions/actions";
+import "./Ciudad.css";
 
-export default function Ciudad({onFilter}) {
-    const {ciudadId} = useParams();
-    const city = onFilter(ciudadId) 
-
-
-    return (
+export default function Ciudad() {
+  const { ciudadId } = useParams();
+  const citie = useSelector((state) => state.citie);
+  const dispatch = useDispatch();
+  useEffect(() => {
+   dispatch(onFilter(ciudadId));
+  }, [])
+  
+  return (
+    <div>
+      {(citie.length === 0) ? (
+        <div>...Loading</div>
+      ) : (
         <div className="containerCiudad">
-                <div className="contentCardTitle">
-                    <div className="titleCard">
-
-                    <h2 className="divTitleCard">{city.name}</h2>
-                    </div>
-                    <div className="ciudadContent">
-                        <div className="ciudadLeft">
-                            <p className="descriptionCard" >Temperatura: {city.temp} ºC</p>
-                            <p className="descriptionCard" >Clima: {city.weather}</p>
-                            <p className="descriptionCard" >Viento: {city.wind} km/h</p>
-                        </div>
-                        <div className="ciudadRight">
-                            <p className="descriptionCard" >Cantidad de nubes: {city.clouds}</p>
-                            <p className="descriptionCard" >Latitud: {city.latitud}º</p>
-                            <p className="descriptionCard" >Longitud: {city.longitud}º</p>
-                        </div>
-                    </div>
+          <div className="contentCardTitle">
+            <div className="titleCard">
+              <h2 className="divTitleCard">{citie[0].name}</h2>
             </div>
+            <div className="ciudadContent">
+              <div className="ciudadLeft">
+                <p className="descriptionCard">Temperatura: {} ºC</p>
+                <p className="descriptionCard">Clima: {}</p>
+                <p className="descriptionCard">Viento: {} km/h</p>
+              </div>
+              <div className="ciudadRight">
+                <p className="descriptionCard">
+                  Cantidad de nubes: {}
+                </p>
+                <p className="descriptionCard">Latitud: {}º</p>
+                <p className="descriptionCard">Longitud: {}º</p>
+              </div>
+            </div>
+          </div>
         </div>
-    )
+      )}
+    </div>
+  );
 }

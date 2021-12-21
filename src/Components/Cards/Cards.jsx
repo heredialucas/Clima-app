@@ -1,21 +1,28 @@
-import React from 'react';
-import './Cards.css';
+import React from "react";
+import "./Cards.css";
+import { useSelector } from "react-redux";
+import Card from "../Card/Card.jsx";
 
-import Card from '../Card/Card.jsx';
+export default function Cards() {
+  const cities = useSelector((state) => state.cities);
 
-export default function Cards({cities, onClose}) {
   return (
-    <div className='cards'>
-      {(!cities) ? "No hay ciudades que mostrar" :
-      cities.map(c => <Card
-          key={c.id}
-          max={c.max}
-          min={c.min}
-          name={c.name}
-          img={c.img}
-          onClose={() => onClose(c.id)}
-          id={c.id}
-        /> )}
+    <div className="cards">
+      {(!cities) ? (
+        <div>...Loading</div>
+      ) : (
+        cities.map((c) => (
+          <Card
+            key={c.id}
+            max={c.main.temp_max}
+            min={c.main.temp_min}
+            name={c.name}
+            img={c.weather[0].icon}
+            id={c.id}
+          />
+        ))
+      )
+      }
     </div>
   );
 }

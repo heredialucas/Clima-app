@@ -1,20 +1,19 @@
 import React, { useState } from "react";
-import  {useNavigate }  from 'react-router-dom';
+import { useDispatch } from "react-redux";
+import { onSearch} from "../redux/actions/actions";
 import "./SearchBar.css";
 
-export default function SearchBar({ onSearch }) {
+export default function SearchBar() {
   const [city, setCity] = useState("");
-  const redir = useNavigate()
 
-
+  const dispatch = useDispatch()
   return (
     <form
       className="d-flex"
       onSubmit={(e) => {
         e.preventDefault();
-        onSearch(city);
+        dispatch(onSearch(city));
         setCity("");
-        redir('./')
       }}
     >
       <input

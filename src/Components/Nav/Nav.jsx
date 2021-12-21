@@ -4,7 +4,7 @@ import SearchBar from "../SearchBar/SearchBar.jsx";
 import "./Nav.css";
 import { Link } from "react-router-dom";
 
-function Nav({ onSearch}) {
+function Nav() {
 
 
   return (
@@ -30,7 +30,7 @@ function Nav({ onSearch}) {
           <span>Acerca del Proyecto</span>
         </Link>
       </div>
-      <SearchBar onSearch={onSearch} />
+      <SearchBar />
     </nav>
   );
 }
