@@ -41,7 +41,7 @@ function rootReducer(state = initialState, actions) {
     case ON_STYLE:
       return {
         ...state,
-        style: state.style ? false : true,
+        style: state.style ? actions.payload : !actions.payload,
       };
     case ON_ADD_CITIE:
       return {

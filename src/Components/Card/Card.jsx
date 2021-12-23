@@ -1,27 +1,24 @@
-import React, { useState } from "react";
+import React from "react";
 import "./Card.css";
 import { Link } from "react-router-dom";
 import { onClose } from "../redux/actions/actions";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { onStyle } from "../redux/actions/actions";
 
 export default function Card({ min, max, name, img, id }) {
-  
   const dispatch = useDispatch();
-  
-  const [style, setStyle] = useState(true);
-
-  function onChange() {
-    style ? setStyle(false) : setStyle(true);
-  }
+  const style = useSelector((state) => state.style);
 
   return (
-    <div className={style ? "card" : "cardNew"}>
+    <div className={style ? "cardNew" : "card"}>
       <div id="changeIcon" className="container">
-        <button onClick={onChange} className={style ? "botonChange" : "botonChange2"}>
-        </button>
+        <button
+          onClick={()=>dispatch(onStyle(false))}
+          className={style ? "botonChange2" : "botonChange"}
+        ></button>
       </div>
       <Link className="cartas" to={`/ciudad/${id}`}>
-        <div className="card-body d-flex flex-column align-content-center">
+        <div className={style ? "card-body" : "card-body1"}>
           <img
             className="iconoClima"
             src={"http://openweathermap.org/img/wn/" + img + "@2x.png"}
@@ -33,17 +30,20 @@ export default function Card({ min, max, name, img, id }) {
           <div className=" dataCard">
             <div className=" col-md-6 col-lg-6 cartasDatos">
               <p className="cartasDatos-p1">Min</p>
-              <p className="cartasDatos-p2">{min}°</p>
+              <p className="cartasDatos-p2">{parseInt(min) - 273}°</p>
             </div>
             <div className=" col-md-6 col-lg-6 cartasDatos">
               <p className="cartasDatos-p1">Max</p>
-              <p className="cartasDatos-p2">{max}°</p>
+              <p className="cartasDatos-p2">{parseInt(max) - 273}°</p>
             </div>
           </div>
         </div>
       </Link>
       <div id="closeIcon" className="container">
-        <button onClick={()=>(dispatch(onClose(id)))} className={style ? "boton" : "boton2"}>
+        <button
+          onClick={() => dispatch(onClose(id))}
+          className={style ? "boton2" : "boton"}
+        >
           X
         </button>
       </div>

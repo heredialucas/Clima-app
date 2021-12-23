@@ -1,11 +1,21 @@
 *{
     font-family: 'Secular One', sans-serif;
 }
-body{
+
+.body1{
     background-image: url('./asset/nubes.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    height: 100vh;
+
+}
+.body2{
+    background-image: url('./asset/lluvia.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 100vh;
 }
 
 a{

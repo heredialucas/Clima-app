@@ -1,6 +1,12 @@
-.navegacion {
+.navegacion2 {
   background-color: #6b80a0;
   border-radius: 0 0 0 50px;
+  z-index: 100;
+}
+.navegacion1 {
+  background-color: #000000;
+  border-radius: 0 0 0 50px;
+  z-index: 100;
 }
 
 #logo {
@@ -20,6 +26,34 @@
   padding: 5px 4px;
   color: aliceblue;
 }
+.linkHome1 {
+  border-radius: 50%;
+  border: 0px;
+  border: 1px solid aliceblue;
+  background-color: #292828;
+  /* outline: 2px solid aliceblue; */
+  padding: 5px 4px;
+  color: aliceblue;
+}
+.linkHome2 {
+  border-radius: 50%;
+  border: 0px;
+  border: 1px solid aliceblue;
+  background-color: aliceblue;
+  /* outline: 2px solid aliceblue; */
+  padding: 5px 4px;
+  color: #050505;
+}
+.linkHome1:hover {
+  color: aliceblue;
+  border-radius: 5px;
+  transition: 1s;
+}
+.linkHome2:hover {
+  color: #050505;
+  border-radius: 5px;
+  transition: 1s;
+}
 .linkHome:hover {
   color: aliceblue;
   outline-style: dotted;
@@ -28,7 +62,12 @@
 }
 
 @media screen and (max-width: 800px) {
-  .navegacion {
+  .navegacion2 {
+    display: flex;
+    justify-content: center;
+    border-radius: 0 0 0 0px;
+  }
+  .navegacion1 {
     display: flex;
     justify-content: center;
     border-radius: 0 0 0 0px;

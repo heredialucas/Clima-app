@@ -49,6 +49,9 @@ export function onFilter(id) {
   };
 }
 
-export function onStyle() {
-  return {};
+export function onStyle(value) {
+  return {
+    type: ON_STYLE,
+    payload: value
+  };
 }
