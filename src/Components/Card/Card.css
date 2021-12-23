@@ -1,5 +1,5 @@
 
-.card::after {
+/* .card::after {
   content: "";
   position: absolute;
   border-radius: 50%;
@@ -9,8 +9,8 @@
   left: -30px;
   background-color: #334b70;
   opacity: 0.1;
-}
-.card:hover:after {
+} */
+/* .card:hover:after {
   transition: 1s;
   position: absolute;
   background-color: #0f1011;
@@ -18,9 +18,14 @@
   left: -50px;
   width: 150px;
   height: 150px;
-}
+} */
 
 .card {
+  background-image: url('../../asset/lluvia.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
   box-shadow: 0px 0px 8px 0.2px #000;
   overflow: hidden;
   background-color: #fff;
@@ -28,16 +33,19 @@
   border-radius: 30px 30px 130px 130px;
   margin: 30px;
   width: 18rem;
+  z-index: 100;
+
+  
 }
-.card:hover:before {
+/* .card:hover:before {
   transition: 1s;
   position: absolute;
   top: 220px;
   left: 210px;
   width: 100px;
   height: 100px;
-}
-.card::before {
+} */
+/* .card::before {
   content: "";
   display: block;
   position: absolute;
@@ -48,7 +56,7 @@
   left: 120px;
   background-color: #334b70;
   opacity: 0.1;
-}
+} */
 /* .cardNew:hover:after {
   transition: 1s;
   position: absolute;
@@ -60,6 +68,11 @@
 } */
 
 .cardNew::after {
+  background-image: url('../../asset/nubes.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
   content: "";
   z-index: -1;
   position: absolute;
@@ -68,10 +81,16 @@
   height: 200px;
   top: 45px;
   left: -80px;
-  box-shadow: -2px 0px 0px 0.1px rgb(211, 209, 209);
+  box-shadow: -1px 0px 0px 0.1px rgb(211, 209, 209);
   background-color: #fff;
 }
 .cardNew {
+  background-image: url('../../asset/nubes.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+
   position: relative;
   z-index: 100;
   box-shadow: 0px 0px 8px 0.2px rgb(211, 209, 209);
@@ -82,8 +101,13 @@
   width: 300px;
 }
 .cardNew::before {
+  background-image: url('../../asset/nubes.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
   content: "";
-  box-shadow: 3px 0px 0px .001px rgb(211, 209, 209);
+  box-shadow: 1px 0px 0px .001px rgb(211, 209, 209);
   position: absolute;
   border-radius: 280px/250px;
   width: 200px;
@@ -111,14 +135,24 @@
 }
 
 .card-title {
-  color: #334b70;
+  color: #000000;
+  margin-bottom: 15px;
+}
+.card-title1 {
+  color: aliceblue;
   margin-bottom: 15px;
 }
 .card-title:hover {
   transition: 2s;
   border-right: 60px solid #cad3e2;
   border-left: 60px solid #cad3e2;
-  border-color: #334b70;
+  border-color: aliceblue;
+}
+.card-title1:hover {
+  transition: 2s;
+  border-right: 60px solid rgb(0, 0, 0);
+  border-left: 60px solid rgb(0, 0, 0);
+  border-color:aliceblue;
 }
 
 .dataCard {
@@ -128,15 +162,23 @@
 }
 
 .cartasDatos-p1 {
-  border-color: #334b70;
-  color: #334b70;
+  border-color: #000000;
+  color: #000000;
+}
+.cartasDatos-p3 {
+  border-color: aliceblue;
+  color: aliceblue;
 }
 .cartasDatos-p1:hover {
   transition: 0.3s;
   text-decoration: underline;
 }
 .cartasDatos-p2 {
-  color: #334b70;
+  color: #000000;
+  text-decoration: none;
+}
+.cartasDatos-p4 {
+  color:aliceblue;
   text-decoration: none;
 }
 .cartasDatos-p2:hover {
@@ -144,7 +186,7 @@
   display: inline;
   padding-left: 5px;
   padding-right: 5px;
-  border: 1px solid #334b70;
+  border: 1px solid #000000;
   border-radius: 50%;
 }
 #changeIcon {
@@ -162,23 +204,23 @@
 .botonChange2 {
   width: 20px;
   height: 20px;
-  background-color: #425a7e;
+  background-color: #c75e3e;
   border-radius: 50%;
-  border-color: #334b70;
+  border-color: #c5c5c5;
   color: aliceblue;
 }
 .botonChange2:hover {
   transition: 0.5s;
   outline: none;
-  background-color: #7c93b6;
-  border-color: #7c93b6;
+  background-color: #0a0a0a;
+  border-color: #c2c1c1;
   border-radius: 50%;
   box-shadow: 0px 0px 4px 0.2px #000;
 }
 .botonChange {
   width: 20px;
   height: 20px;
-  background-color: #425a7e;
+  background-color: rgb(255, 255, 255);
   border-radius: 4px;
   border-color: #334b70;
   color: aliceblue;
@@ -186,14 +228,14 @@
 .botonChange:hover {
   transition: 0.5s;
   outline: none;
-  background-color: #7c93b6;
+  background-color: #e9e6e2;
   border-color: #7c93b6;
-  border-radius: 1px;
+  border-radius: 50%;
   box-shadow: 0px 0px 4px 0.2px #000;
 }
 .boton2 {
   width: 50px;
-  background-color: #334b70;
+  background-color: #152333;
   border-radius: 50%;
   border-color: #334b70;
   color: aliceblue;
@@ -209,17 +251,18 @@
 }
 .boton {
   width: 50px;
-  background-color: #334b70;
+  background-color: aliceblue;
   border-radius: 50px 50px 100px 100px;
   border-color: #334b70;
-  color: aliceblue;
+  color: rgb(0, 0, 0);
 }
 .boton:hover {
   box-shadow: 0px 0px 4px 0.2px #000;
   transition: 1s;
   outline: none;
-  background-color: #e04018;
-  width: 120px;
+  background-color: #c43714;
+  color: aliceblue;
+  width: 80px;
   border-color: #334b70;
   border-radius: 50px 50px 400px 400px;
 }
@@ -237,16 +280,17 @@
 
 @media screen and (max-width: 600px) {
   .boton {
-    width: 120px;
-    background-color: #334b70;
-    border-radius: 50px 50px 400px 400px;
-    border-color: #334b70;
+    width: 80px;
+    background-color: #c43714;
+    border-radius: 100px 100px 400px 400px;
+    border-color: aliceblue;
+    color: aliceblue;
   }
   .boton2 {
     width: 40px;
-    background-color: #334b70;
+    background-color: #c43714 ;
     border-radius: 50%;
-    border-color: #334b70;
+    border-color:rgb(228, 228, 228);
   }
 
   .card-title{
@@ -254,7 +298,7 @@
     margin: 0 10px;
   }
   .dataCard{
-    font-size: 10px;
+    font-size: 13px;
     margin: 10px 15px 0px 15px;
     justify-content: space-around;
   }
@@ -287,8 +331,11 @@
     height: 110px;
     left: 110px;
     top: 60px;
+    box-shadow: 2px 0px 0px 0.2px rgb(211, 209, 209);
+    
   }
   .cardNew::after {
+    box-shadow: -2px 0px 0px 0.2px rgb(211, 209, 209);
     width: 140px;
     height: 120px;
     left: -50px;

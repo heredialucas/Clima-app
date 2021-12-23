@@ -3,10 +3,21 @@
     color: aliceblue;
     border:1px solid aliceblue;
 }
+.botonSearch1{
+    background-color: #131313;
+    color: aliceblue;
+    border:1px solid aliceblue;
+}
 
 .botonSearch:hover{
     transition: .5s;
     background-color: aliceblue;
     color: #6b80a0;
+    border:1px solid aliceblue;
+}
+.botonSearch1:hover{
+    transition: .5s;
+    background-color: aliceblue;
+    color:#131313;
     border:1px solid aliceblue;
 }

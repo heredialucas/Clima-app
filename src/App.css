@@ -1,21 +1,42 @@
 *{
     font-family: 'Secular One', sans-serif;
 }
-
-.body1{
-    background-image: url('./asset/nubes.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    height: 100vh;
+body::after{
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: -350px;
+    left: -250px;
+    width: 900px;
+    height: 900px;
+    border-radius: 50%;
+    background-color: rgb(117, 118, 119);
+    position: fixed;
+    opacity: .2;
 
 }
-.body2{
-    background-image: url('./asset/lluvia.jpg');
+body::before{
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 350px;
+    right: -300px;
+    width: 1000px;
+    height: 1000px;
+    border-radius: 50%;
+    background-color: rgb(54, 107, 153);
+    position: fixed;
+    opacity: .2;
+
+}
+body{
+background-color: rgb(231, 231, 233);
+
+    /* background-image: url('./asset/cielo.jpg');
     background-size: cover;
     background-repeat: no-repeat;
-    background-attachment: fixed;
-    height: 100vh;
+    background-attachment: fixed; */
+
 }
 
 a{
@@ -33,4 +54,37 @@ a{
     background-color: aliceblue;
     color: #6b80a0;
     border:1px solid aliceblue;
+}
+
+@media screen and (max-width: 600px) {
+
+    body::after{
+        content: "";
+        position: absolute;
+        z-index: -1;
+        top: -100px;
+        left: -220px;
+        width: 500px;
+        height: 500px;
+        border-radius: 50%;
+        background-color: rgb(117, 118, 119);
+        position: fixed;
+        opacity: .2;
+    
+    }
+    body::before{
+        content: "";
+        position: absolute;
+        z-index: -1;
+        top: 350px;
+        right: -300px;
+        width: 500px;
+        height: 500px;
+        border-radius: 50%;
+        background-color: rgb(54, 107, 153);
+        position: fixed;
+        opacity: .2;
+    
+    }
+
 }

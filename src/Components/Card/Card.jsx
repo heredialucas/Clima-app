@@ -26,15 +26,15 @@ export default function Card({ min, max, name, img, id }) {
             height="80"
             alt=""
           />
-          <h5 className="card-title">{name}</h5>
+          <h5 className={style ? "card-title" : "card-title1"}>{name}</h5>
           <div className=" dataCard">
             <div className=" col-md-6 col-lg-6 cartasDatos">
-              <p className="cartasDatos-p1">Min</p>
-              <p className="cartasDatos-p2">{parseInt(min) - 273}°</p>
+              <p className={style ? "cartasDatos-p1" : "cartasDatos-p3"}>Min</p>
+              <p className={style ? "cartasDatos-p2" : "cartasDatos-p4"}>{parseInt(min) - 273}°</p>
             </div>
             <div className=" col-md-6 col-lg-6 cartasDatos">
-              <p className="cartasDatos-p1">Max</p>
-              <p className="cartasDatos-p2">{parseInt(max) - 273}°</p>
+              <p className={style ? "cartasDatos-p1" : "cartasDatos-p3"}>Max</p>
+              <p className={style ? "cartasDatos-p2" : "cartasDatos-p4"}>{parseInt(max) - 273}°</p>
             </div>
           </div>
         </div>

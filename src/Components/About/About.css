@@ -5,16 +5,16 @@
     margin: 40px 200px;
     font-size: 40px;
     text-align: center;
-    color: #3b506e;
+    color: #000000;
 }
 .containerAbout1{
     padding: 70px 30px ;
     border-radius: 15px;
-    box-shadow: 0 0 5px 1px rgb(233, 233, 233);
+    box-shadow: 0 0 5px 1px rgb(0, 0, 0);
     margin: 40px 200px;
     font-size: 40px;
     text-align: center;
-    color: aliceblue;
+    color: rgb(12, 12, 12);
 }
 
 @media screen and (max-width: 800px){
@@ -32,10 +32,10 @@
         padding: 3px;
         margin: 70px 15px 5px;
         border-radius: 15px;
-        box-shadow: 0 0 5px 1px rgb(233, 233, 233);
+        box-shadow: 0 0 5px 1px rgb(0, 0, 0);
         font-size: 20px;
         text-align: center;
-        color: aliceblue;
+        color: rgb(0, 0, 0);
     }
 
 }

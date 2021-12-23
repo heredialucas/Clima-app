@@ -1,106 +1,130 @@
 .containerCiudad {
-    margin: 0 auto;
-    max-width: 1000px;
-  }
+  margin: 0 auto;
+  max-width: 1000px;
+  z-index: 10;
+}
 
+.contentCardTitle {
+  z-index: 190;
+
+  margin: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 15px;
+  box-shadow: 0 0 6px 1px rgb(255, 255, 255);
+}
+.contentCardTitle1 {
+  z-index: 100;
+
+  margin: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 15px;
+  box-shadow: 0 0 6px 1px rgb(0, 0, 0);
+}
+
+.divTitleCard {
+  z-index: 100;
+
+  text-align: center;
+  margin-top: 20px;
+  font-size: 50px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-decoration: underline;
+  color: #ffffff;
+  text-shadow: 1px 1px #000, 1px 1px #000;
+}
+.divTitleCard1 {
+  text-align: center;
+  text-decoration: underline;
+  margin-top: 20px;
+  z-index: 100;
+
+  font-size: 50px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: rgb(255, 255, 255);
+  text-shadow: 1px 1px #000, 1px 1px #000;
+}
+.divTitleCard:hover {
+  text-decoration: underline;
+  cursor: default;
+}
+
+.cityContent {
+  display: flex;
+  flex-direction: column;
+}
+
+.descriptionCard {
+  display: block;
+  padding: 4px auto;
+  font-size: 2rem;
+  letter-spacing: 1px;
+  font-weight: 600;
+  color: rgb(0, 0, 0);
+}
+.descriptionCard1 {
+  display: block;
+  padding: 4px auto;
+  font-size: 2rem;
+  letter-spacing: 1px;
+  font-weight: 600;
+  color: rgb(0, 0, 0);
+}
+.descriptionCard:hover {
+  border-left: 2px solid;
+  border-right: 2px solid;
+  border-width: 5px;
+  transition: 0.2s;
+  cursor: default;
+}
+.descriptionCard1:hover {
+  border-left: 2px solid;
+  border-right: 2px solid;
+  border-width: 5px;
+  transition: 0.2s;
+  cursor: default;
+}
+
+@media screen and (max-width: 800px) {
   .contentCardTitle {
-    margin: 100px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    border-radius: 15px;
-    box-shadow: 0 0 6px 1px #000;
+    margin: 15px;
+    box-shadow: 0 0 6px 1px rgb(255, 255, 255);
   }
-  
-  .divTitleCard {
-    text-align: center;
-    margin-top: 20px;
-    font-size: 50px;
-    font-weight: 700;
-    letter-spacing: 2px;
-    color: #6b80a0;
-    text-shadow: 1px 1px #000, 1px 1px #000;
+  .contentCardTitle1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 15px;
+    box-shadow: 0 0 6px 1px rgb(0, 0, 0);
   }
-  .divTitleCard1 {
-    text-align: center;
-    margin-top: 20px;
-    font-size: 50px;
-    font-weight: 700;
-    letter-spacing: 2px;
-    color: aliceblue;
-    text-shadow: 1px 1px #000, 1px 1px #000;
+  .containerCiudad {
+    margin: 0 auto;
+    min-width: 400;
+    padding: 0;
   }
-  .divTitleCard:hover{
-    text-decoration: underline;
-    cursor: default;
-  }
-  
   .cityContent {
     display: flex;
     flex-direction: column;
   }
-  
+
   .descriptionCard {
-    display: block;
-    padding: 4px auto;
-    font-size: 2rem;
+    margin: 2px auto;
+    font-size: 1.2rem;
     letter-spacing: 1px;
     font-weight: 600;
   }
   .descriptionCard1 {
-    display: block;
-    padding: 4px auto;
-    font-size: 2rem;
+    margin: 2px auto;
+    font-size: 1.2rem;
     letter-spacing: 1px;
     font-weight: 600;
-    color: aliceblue;
   }
-  .descriptionCard:hover{
-    border-left: 2px solid;
-    border-right: 2px solid;
-    border-width: 5px ;
-    transition: .2s;
-    cursor: default;
-  }
-  
-  @media screen and (max-width: 800px) {
-
-    .contentCardTitle{
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      margin: 15px;
-      box-shadow: 0 0 6px 1px #000;
-
-    }
-    .contentCardTitle1{
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      margin: 15px;
-      box-shadow: 0 0 6px 1px rgb(224, 219, 219);
-
-    }
-    .containerCiudad {
-      margin: 0 auto;
-      min-width: 400;
-      padding: 0;
-    }
-    .cityContent {
-      display: flex;
-      flex-direction: column;
-    }
-  
-    .descriptionCard {
-      margin: 2px auto;
-      font-size: 1.2rem;
-      letter-spacing: 1px;
-      font-weight: 600;
-    }
-    .descriptionCard1 {
-      margin: 2px auto;
-      font-size: 1.2rem;
-      letter-spacing: 1px;
-      font-weight: 600;
-    }
-  }
+}

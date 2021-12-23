@@ -1,12 +1,20 @@
 .navegacion2 {
-  background-color: #6b80a0;
+  background-image: url('../../asset/nubes.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   border-radius: 0 0 0 50px;
   z-index: 100;
+  
 }
 .navegacion1 {
-  background-color: #000000;
+  background-image: url('../../asset/lluvia.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   border-radius: 0 0 0 50px;
   z-index: 100;
+
 }
 
 #logo {

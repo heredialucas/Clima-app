@@ -5,11 +5,12 @@ import Card from "../Card/Card.jsx";
 
 export default function Cards() {
   const cities = useSelector((state) => state.cities);
+  const style = useSelector(state => state.style)
 
   return (
     <div className="cards">
       {(!cities) ? (
-        <div>...Loading</div>
+        <h3 className={style ? "loading" : "loading1"}>No hay Ciudades para mostrar</h3>
       ) : (
         cities.map((c) => (
           <Card

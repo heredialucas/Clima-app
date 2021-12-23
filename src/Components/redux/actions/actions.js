@@ -18,8 +18,7 @@ export function onSearch(city) {
           type: ON_SEARCH,
           payload: json,
         });
-      });
-      
+      })
   };
 }
 

@@ -3,3 +3,12 @@
     flex-wrap: wrap;
     justify-content: center;
   }
+
+  .loading1{
+    margin-top: 50px;
+    color: aliceblue;
+  }
+  .loading{
+    margin-top: 50px;
+    color: #6b80a0;
+  }
