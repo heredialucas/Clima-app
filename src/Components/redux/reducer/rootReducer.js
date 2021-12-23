@@ -29,6 +29,10 @@ function rootReducer(state = initialState, actions) {
         });
         return {...state}
       } else if (!city) {
+        swal({
+          icon:"success",
+          title: "Ciudad Agregada correctamente",
+        });
         return {
           ...state,
           cities: [...state.cities, actions.payload],

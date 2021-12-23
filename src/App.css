@@ -10,9 +10,9 @@ body::after{
     width: 900px;
     height: 900px;
     border-radius: 50%;
-    background-color: rgb(117, 118, 119);
+    background-color: rgb(255, 255, 255);
     position: fixed;
-    opacity: .2;
+    opacity: .7;
 
 }
 body::before{
@@ -24,13 +24,13 @@ body::before{
     width: 1000px;
     height: 1000px;
     border-radius: 50%;
-    background-color: rgb(54, 107, 153);
+    background-color: rgb(255, 255, 255);
     position: fixed;
-    opacity: .2;
+    opacity: .7;
 
 }
 body{
-background-color: rgb(231, 231, 233);
+    background-color: rgb(143, 166, 184);
 
     /* background-image: url('./asset/cielo.jpg');
     background-size: cover;
@@ -67,9 +67,9 @@ a{
         width: 500px;
         height: 500px;
         border-radius: 50%;
-        background-color: rgb(117, 118, 119);
+        background-color: rgb(255, 255, 255);
         position: fixed;
-        opacity: .2;
+        opacity: .7;
     
     }
     body::before{
@@ -81,9 +81,9 @@ a{
         width: 500px;
         height: 500px;
         border-radius: 50%;
-        background-color: rgb(54, 107, 153);
+        background-color: rgb(255, 255, 255);
         position: fixed;
-        opacity: .2;
+        opacity: .7;
     
     }
 
