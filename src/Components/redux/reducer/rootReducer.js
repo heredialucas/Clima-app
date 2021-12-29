@@ -45,6 +45,10 @@ function rootReducer(state = initialState, actions) {
         return state;
       }
     case ON_CLOSE:
+      swal({
+        icon:"success",
+        title: "Ciudad eliminada correctamente",
+      });
       return {
         ...state,
         cities: state.cities.filter((city) => city.id !== actions.payload),
