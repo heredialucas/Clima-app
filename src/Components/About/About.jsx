@@ -6,7 +6,7 @@ export default function About() {
   return (
     <div className="containerAbout0">
       <div className={style ? "containerAbout" : "containerAbout1"}>
-        <h2>Clima App</h2>
+        <h2 className="aboutTitle">Clima App</h2>
         <hr />
         <p>
           En esta Aplicación usted cuenta con aproximadamente 200.000 ciudades
