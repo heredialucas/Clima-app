@@ -26,7 +26,7 @@
   background-repeat: no-repeat;
   background-attachment: fixed;
 
-  box-shadow: 0px 0px 8px 0.2px #000;
+  box-shadow: 0px 0px 5px 0.2px rgb(252, 252, 252);
   overflow: hidden;
   background-color: #fff;
   padding-bottom: 10px;
@@ -81,7 +81,7 @@
   height: 200px;
   top: 45px;
   left: -80px;
-  box-shadow: -1px 0px 0px 0.1px rgb(211, 209, 209);
+  box-shadow: -5px 0px 3px 0px rgb(255, 255, 255);
   background-color: #fff;
 }
 .cardNew {
@@ -93,7 +93,7 @@
 
   position: relative;
   z-index: 100;
-  box-shadow: 0px 0px 8px 0.2px rgb(211, 209, 209);
+  box-shadow: 3px 3px 3px 1px rgb(255, 255, 255);
   background-color: #fff;
   padding-bottom: 10px;
   border-radius: 50%;
@@ -107,7 +107,7 @@
   background-attachment: fixed;
 
   content: "";
-  box-shadow: 1px 0px 0px .001px rgb(211, 209, 209);
+  box-shadow: 8px 0px 3px 0px rgb(255, 255, 255);
   position: absolute;
   border-radius: 280px/250px;
   width: 200px;
@@ -173,6 +173,10 @@
   transition: 0.3s;
   text-decoration: underline;
 }
+.cartasDatos-p3:hover {
+  transition: 0.3s;
+  text-decoration: underline;
+}
 .cartasDatos-p2 {
   color: #000000;
   text-decoration: none;
@@ -187,6 +191,14 @@
   padding-left: 5px;
   padding-right: 5px;
   border: 1px solid #000000;
+  border-radius: 50%;
+}
+.cartasDatos-p4:hover {
+  transition: 0.3s;
+  display: inline;
+  padding-left: 5px;
+  padding-right: 5px;
+  border: 1px solid #ffffff;
   border-radius: 50%;
 }
 #changeIcon {
@@ -325,17 +337,19 @@
   .cardNew{
     width: 200px;
     height: 200px;
+    box-shadow: 3px 3px 3px 1px rgb(255, 255, 255);
+
   }
   .cardNew::before {
     width: 130px;
     height: 110px;
     left: 110px;
     top: 60px;
-    box-shadow: 2px 0px 0px 0.2px rgb(211, 209, 209);
+    box-shadow: 8px 0px 3px 0px rgb(255, 255, 255);
     
   }
   .cardNew::after {
-    box-shadow: -2px 0px 0px 0.2px rgb(211, 209, 209);
+    box-shadow: -5px 0px 3px 0px rgb(255, 255, 255);
     width: 140px;
     height: 120px;
     left: -50px;

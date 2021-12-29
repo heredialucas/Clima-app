@@ -1,90 +1,65 @@
-*{
-    font-family: 'Secular One', sans-serif;
+* {
+  font-family: "Secular One", sans-serif;
 }
-body::after{
+
+.body1 {
+  background-image: url("./asset/nubes.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 100%;
+}
+.body2 {
+  background-image: url("./asset/lluvia.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 100%;
+}
+
+a {
+  /* color: aliceblue; */
+  text-decoration: none;
+}
+
+
+.botonSwal {
+  background-color: #6b80a0;
+  color: aliceblue;
+  border: 1px solid aliceblue;
+}
+.botonSwal:hover {
+  transition: 0.5s;
+  background-color: aliceblue;
+  color: #6b80a0;
+  border: 1px solid aliceblue;
+}
+
+@media screen and (max-width: 600px) {
+  body::after {
     content: "";
     position: absolute;
     z-index: -1;
-    top: -350px;
-    left: -250px;
-    width: 900px;
-    height: 900px;
+    top: -100px;
+    left: -220px;
+    width: 500px;
+    height: 500px;
     border-radius: 50%;
     background-color: rgb(255, 255, 255);
     position: fixed;
-    opacity: .7;
-
-}
-body::before{
+    opacity: 0.7;
+  }
+  body::before {
     content: "";
     position: absolute;
     z-index: -1;
     top: 350px;
     right: -300px;
-    width: 1000px;
-    height: 1000px;
+    width: 500px;
+    height: 500px;
     border-radius: 50%;
     background-color: rgb(255, 255, 255);
     position: fixed;
-    opacity: .7;
-
-}
-body{
-    background-color: rgb(143, 166, 184);
-
-    /* background-image: url('./asset/cielo.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed; */
-
-}
-
-a{
-    /* color: aliceblue; */
-    text-decoration: none;
-}
-
-.botonSwal{
-    background-color: #6b80a0;
-    color: aliceblue;
-    border:1px solid aliceblue;
-}
-.botonSwal:hover{
-    transition: .5s;
-    background-color: aliceblue;
-    color: #6b80a0;
-    border:1px solid aliceblue;
-}
-
-@media screen and (max-width: 600px) {
-
-    body::after{
-        content: "";
-        position: absolute;
-        z-index: -1;
-        top: -100px;
-        left: -220px;
-        width: 500px;
-        height: 500px;
-        border-radius: 50%;
-        background-color: rgb(255, 255, 255);
-        position: fixed;
-        opacity: .7;
-    
-    }
-    body::before{
-        content: "";
-        position: absolute;
-        z-index: -1;
-        top: 350px;
-        right: -300px;
-        width: 500px;
-        height: 500px;
-        border-radius: 50%;
-        background-color: rgb(255, 255, 255);
-        position: fixed;
-        opacity: .7;
-    
-    }
-
+    opacity: 0.7;
+  }
 }

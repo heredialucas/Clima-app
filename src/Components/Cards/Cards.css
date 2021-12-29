@@ -1,14 +1,21 @@
+.containerCards{
+  height: 100vh;
+}
+
 .cards {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    
   }
 
   .loading1{
     margin-top: 50px;
     color: aliceblue;
+    z-index: 10000;
   }
   .loading{
+    z-index: 10000;
     margin-top: 50px;
     color: #6b80a0;
   }

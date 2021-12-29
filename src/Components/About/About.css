@@ -1,26 +1,32 @@
+.containerAbout0{
+    display: flex;
+    justify-content: center;
+    padding: 40px;
+    height: 100%;
+}
 .containerAbout{
+    max-width: 800px;
     padding: 70px 30px ;
     border-radius: 15px;
     box-shadow: 0 0 5px 1px #000;
-    margin: 40px 200px;
     font-size: 40px;
     text-align: center;
     color: #000000;
 }
 .containerAbout1{
+    max-width: 800px;
     padding: 70px 30px ;
     border-radius: 15px;
-    box-shadow: 0 0 5px 1px rgb(0, 0, 0);
-    margin: 40px 200px;
+    box-shadow: 0 0 5px 1px rgb(255, 255, 255);
     font-size: 40px;
     text-align: center;
-    color: rgb(12, 12, 12);
+    color: rgb(255, 255, 255);
 }
 
 @media screen and (max-width: 800px){
     
     .containerAbout{
-        padding: 3px;
+        padding: 30px 3px;
         margin: 70px 15px 5px;
         border-radius: 15px;
         box-shadow: 0 0 5px 1px #000;
@@ -29,13 +35,13 @@
         color: #3b506e;
     }
     .containerAbout1{
-        padding: 3px;
+        padding: 30px 3px;
         margin: 70px 15px 5px;
         border-radius: 15px;
-        box-shadow: 0 0 5px 1px rgb(0, 0, 0);
+        box-shadow: 0 0 5px 1px rgb(255, 255, 255);
         font-size: 20px;
         text-align: center;
-        color: rgb(0, 0, 0);
+        color: rgb(255, 255, 255);
     }
 
 }

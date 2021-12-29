@@ -13,7 +13,7 @@ function App() {
   const cities = useSelector((state) => state.cities);
   const citie = useSelector((state) => state.citie);
   const dispatch = useDispatch();
-  // const style = useSelector(state => state.style)
+  const style = useSelector(state => state.style)
   
   const citiesSaveLocalStorage = () => {
     
@@ -37,16 +37,15 @@ function App() {
     window.localStorage.setItem("citieSave", JSON.stringify(citie));
   }, [cities,citie]);
 
-
   return (
-    <>
+    <div className={style ? "body1" : "body2"}>
       <Nav />
       <Routes>
         <Route path="/about" element={<About />} />
         <Route path="/" element={<Cards />} />
         <Route path="/ciudad/:ciudadId" element={<Ciudad />} />
       </Routes>
-      </>
+      </div>
   );
 }
 

@@ -5,11 +5,14 @@ export const ON_STYLE = "onStyle";
 export const ON_ADD_CITIE = "onAddCitie";
 export const ON_ADD_CITIES = "onAddCities";
 
-const apiKey = "4ae2636d8dfbdc3044bede63951a019b";
+// const apiKey = "4ae2636d8dfbdc3044bede63951a019b";
+const apiKey = "64d0f3fa5e4ece1d2c8229c991d638d5";
 
 export function onSearch(city) {
   return function (dispatch) {
     return fetch(
+      
+      // `https://pro.openweathermap.org/data/2.5/forecast/hourly?q=${city}&appid=${apiKey}`
       `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`
     )
       .then((r) => r.json())
