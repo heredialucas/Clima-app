@@ -25,6 +25,7 @@ export default function SearchBar() {
         dispatch(onSearch(city));
         setCity("");
         redir('/')
+
       }}
     >
       <input

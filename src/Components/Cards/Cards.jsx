@@ -6,7 +6,6 @@ import Card from "../Card/Card.jsx";
 export default function Cards() {
   const cities = useSelector((state) => state.cities);
   const style = useSelector((state) => state.style);
-  console.log(cities);
 
   return (
     <div className="containerCards">

@@ -1,20 +1,22 @@
 .containerCards{
-  height: 100%;
+ min-height: 100vh;
+
 }
 
 .cards {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    
   }
 
   .loading1{
     margin-top: 50px;
     color: aliceblue;
     z-index: 10000;
+    height: 100vh;
   }
   .loading{
+    height: 100vh;
     z-index: 10000;
     margin-top: 50px;
     color: #6b80a0;

@@ -21,7 +21,6 @@ function rootReducer(state = initialState, actions) {
   switch (actions.type) {
     case ON_SEARCH:
       const city = state.cities.find((city) => city.id === actions.payload.id);
-      console.log(actions.payload);
       if (actions.payload.cod === "404") {
         swal({
           icon:"error",
@@ -35,7 +34,7 @@ function rootReducer(state = initialState, actions) {
         });
         return {
           ...state,
-          cities: [...state.cities, actions.payload],
+          cities: [...state.cities,actions.payload]
         };
       } else {
         swal({
