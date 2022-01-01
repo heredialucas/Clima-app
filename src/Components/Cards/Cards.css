@@ -5,6 +5,7 @@
 
 .cards {
     display: flex;
+    flex-direction: row-reverse;
     flex-wrap: wrap;
     justify-content: center;
   }
@@ -20,4 +21,10 @@
     z-index: 10000;
     margin-top: 50px;
     color: #6b80a0;
+  }
+
+  @media screen and (max-width: 800px){
+    .cards{
+      flex-direction: column-reverse;
+    }
   }
